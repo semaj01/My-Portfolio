@@ -127,7 +127,11 @@
           <button
             type="button"
             class="hero-scroll-up-btn"
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            onclick="
+              document
+                .getElementById('about')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
           >
             <i class="bi bi-arrow-up-short"></i>
             <span>Scroll Up</span>
