@@ -170,7 +170,8 @@ h6 {
 
 .header .logo {
   line-height: 1;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  white-space: nowrap;
 }
 
 .header .logo img {
@@ -179,10 +180,13 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 21px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header .social-links {
