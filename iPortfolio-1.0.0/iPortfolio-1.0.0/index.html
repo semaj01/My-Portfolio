@@ -444,12 +444,6 @@
                   </div>
 
                   <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_template" value="table" />
                     <input
@@ -471,9 +465,7 @@
                 <div class="contact-modal-content">
                   <h3>Message Sent</h3>
                   <p>Your message has been sent successfully.</p>
-                  <button type="button" data-close-contact-modal>
-                    Close
-                  </button>
+                  <button type="button" data-close-contact-modal>Close</button>
                 </div>
               </div>
             </div>
@@ -530,36 +522,30 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('#contact .php-email-form');
-        const modal = document.getElementById('contact-success-modal');
-        const closeButton = document.querySelector('[data-close-contact-modal]');
-        const iframe = document.getElementById('hidden-iframe');
-        const loading = form ? form.querySelector('.loading') : null;
-        const errorMessage = form ? form.querySelector('.error-message') : null;
-        const sentMessage = form ? form.querySelector('.sent-message') : null;
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("#contact .php-email-form");
+        const modal = document.getElementById("contact-success-modal");
+        const closeButton = document.querySelector(
+          "[data-close-contact-modal]",
+        );
+        const iframe = document.getElementById("hidden-iframe");
         let hasSubmitted = false;
 
         if (!form || !modal || !iframe || !closeButton) return;
 
-        form.addEventListener('submit', function () {
+        form.addEventListener("submit", function () {
           hasSubmitted = true;
-          if (loading) loading.classList.add('d-block');
-          if (errorMessage) errorMessage.classList.remove('d-block');
-          if (sentMessage) sentMessage.classList.remove('d-block');
         });
 
-        iframe.addEventListener('load', function () {
+        iframe.addEventListener("load", function () {
           if (!hasSubmitted) return;
-          if (loading) loading.classList.remove('d-block');
-          if (sentMessage) sentMessage.classList.add('d-block');
-          modal.classList.add('show');
+          modal.classList.add("show");
           form.reset();
           hasSubmitted = false;
         });
 
-        closeButton.addEventListener('click', function () {
-          modal.classList.remove('show');
+        closeButton.addEventListener("click", function () {
+          modal.classList.remove("show");
         });
       });
     </script>
