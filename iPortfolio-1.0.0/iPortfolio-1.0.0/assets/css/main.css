@@ -706,38 +706,42 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
+.skills .skill-card {
+  background: var(--background-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.skills .skill-card i {
+  font-size: 42px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.skills .skill-card .skill-icon {
+  width: 100px;
+  height: 52px;
+  margin-bottom: 15px;
+  object-fit: contain;
   display: block;
-  background: none;
-  border-radius: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
+.skills .skill-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
+.skills .skill-card p {
+  margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.5;
+  margin-top: 0;
 }
 
 /*--------------------------------------------------------------
