@@ -51,59 +51,72 @@
     <header id="header" class="header dark-background d-flex flex-column">
       <i class="header-toggle d-xl-none bi bi-list"></i>
 
-      <div class="profile-img">
-        <img
-          src="assets/img/ID PIC 1X1,2X2.png"
-          alt="Profile picture"
-          class="img-fluid rounded-circle"
-        />
+      <div class="sidebar-top text-center">
+        <div class="profile-img">
+          <div class="profile-img-wrap">
+            <img
+              src="assets/img/ID PIC 1X1,2X2.png"
+              alt="Profile picture"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <a
+          href="index.html"
+          class="logo d-flex flex-column align-items-center justify-content-center"
+        >
+          <h1 class="sitename">Christian James Mandani</h1>
+          <span class="sidebar-role">CAD Designer &amp; Drafter</span>
+        </a>
+
+        <div class="social-links text-center">
+          <a
+            href="https://www.facebook.com/jaymzz22"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="facebook"
+            aria-label="Facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/jaymzz22?igsh=a25qYXRpYWxrZzQ3"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="instagram"
+            aria-label="Instagram"
+            ><i class="bi bi-instagram"></i
+          ></a>
+        </div>
       </div>
 
-      <a
-        href="index.html"
-        class="logo d-flex align-items-center justify-content-center"
-      >
-        <h1 class="sitename">Christian James Mandani</h1>
-      </a>
-
-      <div class="social-links text-center">
-        <a
-          href="https://www.facebook.com/jaymzz22"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="facebook"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/jaymzz22?igsh=a25qYXRpYWxrZzQ3"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="instagram"
-          ><i class="bi bi-instagram"></i
-        ></a>
-      </div>
+      <div class="sidebar-divider"></div>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li>
             <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i>Home</a
+              ><i class="bi bi-house navicon"></i><span>Home</span></a
             >
           </li>
           <li>
-            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+            <a href="#about"
+              ><i class="bi bi-person navicon"></i><span>About</span></a
+            >
           </li>
           <li>
-            <a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a>
+            <a href="#skills"
+              ><i class="bi bi-tools navicon"></i><span>Skills</span></a
+            >
           </li>
           <li>
             <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i> Services</a
+              ><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a
             >
           </li>
           <li>
             <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i> Contact</a
+              ><i class="bi bi-envelope navicon"></i><span>Contact</span></a
             >
           </li>
         </ul>
@@ -112,27 +125,50 @@
 
     <main class="main">
       <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
-        <img
-          src="assets/logos/1000015714.jpg"
-          alt="Portfolio logo"
-          data-aos="fade-in"
-          class=""
-        />
+      <section id="hero" class="hero section dark-background d-flex flex-column align-items-center justify-content-center">
+        <!-- Ambient CAD Grid Background -->
+        <div class="hero-bg-grid"></div>
+        <div class="hero-ambient-glow"></div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <button
-            type="button"
-            class="hero-scroll-up-btn"
-            onclick="
-              document
-                .getElementById('about')
-                .scrollIntoView({ behavior: 'smooth' })
-            "
-          >
-            <i class="bi bi-arrow-up-short"></i>
-            <span>Scroll Up</span>
-          </button>
+        <div class="container d-flex flex-column align-items-center justify-content-center text-center">
+          <!-- Top Badge -->
+          <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+            <span class="badge-dot"></span>
+            <span>Technical Drafting &amp; Design</span>
+          </div>
+
+          <!-- Hero Logo Showcase Frame -->
+          <div class="hero-logo-frame" data-aos="zoom-in" data-aos-delay="200">
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+            <div class="cad-crosshair ch-tl">+</div>
+            <div class="cad-crosshair ch-tr">+</div>
+            <div class="cad-crosshair ch-bl">+</div>
+            <div class="cad-crosshair ch-br">+</div>
+            <div class="hero-img-wrap">
+              <img
+                src="assets/logos/1000015714.jpg"
+                alt="CJM AutoCAD Design &amp; Drafting Services"
+                class="img-fluid hero-logo-img"
+              />
+            </div>
+          </div>
+
+          <!-- Bottom Action Button -->
+          <div class="hero-action-wrap" data-aos="fade-up" data-aos-delay="300">
+            <button
+              type="button"
+              class="hero-scroll-btn hero-scroll-up-btn"
+              onclick="
+                document
+                  .getElementById('about')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <i class="bi bi-arrow-down-short"></i>
+              <span>Explore Portfolio</span>
+            </button>
+          </div>
         </div>
       </section>
       <!-- /Hero Section -->
@@ -141,25 +177,53 @@
       <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
+          <span class="section-kicker">PROFILE OVERVIEW</span>
           <h2>About</h2>
+          <p>Get to know my journey, interests, and passion for design.</p>
         </div>
         <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4">
-              <div class="about-portrait">
-                <img
-                  src="assets/img/ID PIC 1X1,2X2.png"
-                  class="img-fluid"
-                  alt="Profile picture"
-                />
+          <div class="row gy-4 align-items-center justify-content-center">
+            <div class="col-lg-5 col-md-8">
+              <div class="about-portrait-wrap">
+                <div class="about-portrait-bg-glow"></div>
+                <div class="about-portrait">
+                  <div class="corner-bracket top-left"></div>
+                  <div class="corner-bracket bottom-right"></div>
+                  <div class="cad-crosshair ch-tl">+</div>
+                  <div class="cad-crosshair ch-tr">+</div>
+                  <div class="cad-crosshair ch-bl">+</div>
+                  <div class="cad-crosshair ch-br">+</div>
+                  <div class="img-wrapper">
+                    <img
+                      src="assets/img/images.png"
+                      class="img-fluid"
+                      alt="Christian James Mandani"
+                    />
+                  </div>
+                </div>
+                <!-- Status Badge -->
+                <div class="about-floating-badge" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="badge-content">
+                    <span class="badge-label">Focus Area</span>
+                    <strong>CAD &amp; Drafting</strong>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-8 content">
-              <div class="about-person">
-                <p>
-                  My name is Christian James Mandani, and I am a dedicated
+
+            <div class="col-lg-7 content">
+              <div class="about-card">
+                <div class="card-accent-line"></div>
+                <div class="card-watermark"><i class="bi bi-compass"></i></div>
+                <div class="card-header-badge">
+                  <i class="bi bi-person-badge"></i>
+                  <span>About Me</span>
+                </div>
+                
+                <p class="about-text">
+                  My name is <strong class="name-highlight">Christian James Mandani</strong>, and I am a dedicated
                   student with a strong interest in computer aided design and
                   hands-on learning. I enjoy developing my skills in
                   problem-solving, teamwork, and computer-related tasks. Outside
@@ -168,6 +232,22 @@
                   continue learning, gain valuable experience, and build a
                   successful future in my chosen field.
                 </p>
+
+                <!-- Design Feature Pills -->
+                <div class="about-feature-pills">
+                  <div class="feature-pill">
+                    <i class="bi bi-laptop"></i>
+                    <span>Computer-Aided Design</span>
+                  </div>
+                  <div class="feature-pill">
+                    <i class="bi bi-tools"></i>
+                    <span>Hands-On Learning</span>
+                  </div>
+                  <div class="feature-pill">
+                    <i class="bi bi-lightbulb"></i>
+                    <span>Problem Solving</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -179,36 +259,52 @@
       <section id="skills" class="skills section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
+          <span class="section-kicker">CAPABILITIES</span>
           <h2>Skills</h2>
           <p>My core strengths and technical skills in design.</p>
         </div>
         <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="skill-card text-center">
-                <img
-                  src="assets/img/icons/AutoCad_new_logo.svg"
-                  alt="AutoCAD icon"
-                  class="skill-icon"
-                />
+                <div class="card-accent-bar"></div>
+                <span class="skill-number">01</span>
+                <div class="skill-icon-wrap">
+                  <img
+                    src="assets/img/icons/AutoCad_new_logo.svg"
+                    alt="AutoCAD icon"
+                    class="skill-icon"
+                  />
+                </div>
                 <h4>AutoCAD</h4>
                 <p>Computer-aided design</p>
+                <div class="skill-card-glow"></div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div class="skill-card text-center">
-                <i class="bi bi-pencil-square"></i>
+                <div class="card-accent-bar"></div>
+                <span class="skill-number">02</span>
+                <div class="skill-icon-wrap">
+                  <i class="bi bi-pencil-square"></i>
+                </div>
                 <h4>Technical Drawing</h4>
                 <p>Precise planning and layout design</p>
+                <div class="skill-card-glow"></div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
               <div class="skill-card text-center">
-                <i class="bi bi-graph-up"></i>
+                <div class="card-accent-bar"></div>
+                <span class="skill-number">03</span>
+                <div class="skill-icon-wrap">
+                  <i class="bi bi-graph-up"></i>
+                </div>
                 <h4>Problem Solving</h4>
                 <p>Analytical thinking and decision-making</p>
+                <div class="skill-card-glow"></div>
               </div>
             </div>
           </div>
@@ -220,6 +316,7 @@
       <section id="services" class="services section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
+          <span class="section-kicker">SOLUTIONS &amp; EXPERTISE</span>
           <h2>Services</h2>
           <p>
             I provide professional AutoCAD drafting and design solutions with a
@@ -231,59 +328,68 @@
         </div>
         <!-- End Section Title -->
 
-        <div class="container">
-          <div class="row gy-4">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4 justify-content-center">
             <div
-              class="col-lg-4 col-md-6 service-item d-flex"
+              class="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-graph-up-arrow"></i>
-              </div>
-              <div>
+              <div class="service-card">
+                <div class="card-accent-bar"></div>
+                <span class="service-number">01</span>
+                <div class="service-icon-wrap">
+                  <i class="bi bi-box"></i>
+                </div>
                 <h4 class="title">3D Modeling &amp; Visualization</h4>
                 <p class="description">
                   Creation of basic 3D models and visual representations to help
                   clients better understand project designs and concepts.
                 </p>
+                <div class="service-card-glow"></div>
               </div>
             </div>
             <!-- End Service Item -->
 
             <div
-              class="col-lg-4 col-md-6 service-item d-flex"
+              class="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-layout-text-window"></i>
-              </div>
-              <div>
+              <div class="service-card">
+                <div class="card-accent-bar"></div>
+                <span class="service-number">02</span>
+                <div class="service-icon-wrap">
+                  <i class="bi bi-layers"></i>
+                </div>
                 <h4 class="title">AutoCAD Drafting</h4>
                 <p class="description">
                   Creation of accurate 2D technical drawings, floor plans,
                   elevations, sections, and detailed drafting based on project
                   requirements.
                 </p>
+                <div class="service-card-glow"></div>
               </div>
             </div>
             <!-- End Service Item -->
 
             <div
-              class="col-lg-4 col-md-6 service-item d-flex"
+              class="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-file-earmark-richtext"></i>
-              </div>
-              <div>
+              <div class="service-card">
+                <div class="card-accent-bar"></div>
+                <span class="service-number">03</span>
+                <div class="service-icon-wrap">
+                  <i class="bi bi-arrow-repeat"></i>
+                </div>
                 <h4 class="title">CAD Conversion</h4>
                 <p class="description">
                   Conversion of hand-drawn sketches, PDF files, and scanned
                   documents into clean and editable AutoCAD drawings.
                 </p>
+                <div class="service-card-glow"></div>
               </div>
             </div>
             <!-- End Service Item -->
@@ -296,6 +402,7 @@
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
+          <span class="section-kicker">GET IN TOUCH</span>
           <h2>Contact</h2>
           <p>
             Feel free to reach out for collaborations, inquiries, or project
@@ -308,12 +415,15 @@
           <div class="row gy-4">
             <div class="col-lg-5">
               <div class="info-wrap">
+                <div class="card-accent-bar"></div>
                 <div
-                  class="info-item d-flex"
+                  class="info-item d-flex align-items-center"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div class="info-icon-wrap flex-shrink-0">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
                   <div>
                     <h3>Address</h3>
                     <p>Porto Circle, Balon Anito, Mariveles, Bataan</p>
@@ -322,11 +432,13 @@
                 <!-- End Info Item -->
 
                 <div
-                  class="info-item d-flex"
+                  class="info-item d-flex align-items-center"
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >
-                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div class="info-icon-wrap flex-shrink-0">
+                    <i class="bi bi-telephone"></i>
+                  </div>
                   <div>
                     <h3>Call Us</h3>
                     <p>09637816146</p>
@@ -335,11 +447,13 @@
                 <!-- End Info Item -->
 
                 <div
-                  class="info-item d-flex"
+                  class="info-item d-flex align-items-center"
                   data-aos="fade-up"
                   data-aos-delay="400"
                 >
-                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div class="info-icon-wrap flex-shrink-0">
+                    <i class="bi bi-envelope"></i>
+                  </div>
                   <div>
                     <h3>Email Us</h3>
                     <p>cjmandani2005@gmail.com</p>
@@ -358,6 +472,7 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
+                <div class="card-accent-bar"></div>
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Your Name</label>
@@ -437,6 +552,7 @@
     </main>
 
     <footer id="footer" class="footer position-relative light-background">
+      <div class="footer-top-accent"></div>
       <div class="container">
         <div class="copyright text-center">
           <p>
