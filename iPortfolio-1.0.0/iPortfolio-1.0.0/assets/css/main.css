@@ -1361,6 +1361,243 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Qualifications Section
+--------------------------------------------------------------*/
+.qualifications {
+  position: relative;
+  overflow: hidden;
+}
+
+.qualifications .qualification-card {
+  position: relative;
+  background: var(--surface-color, #ffffff);
+  border-radius: 20px;
+  padding: 38px 34px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 82%);
+  box-shadow:
+    0 15px 35px -12px color-mix(in srgb, var(--accent-color), transparent 88%),
+    0 3px 12px rgba(0, 0, 0, 0.02);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.qualifications .qualification-card:hover {
+  transform: translateY(-7px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  box-shadow:
+    0 24px 48px -12px color-mix(in srgb, var(--accent-color), transparent 75%),
+    0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.qualifications .card-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), #00e5ff);
+  opacity: 1;
+  z-index: 5;
+}
+
+.qualifications .qual-watermark {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 72px;
+  color: var(--accent-color);
+  opacity: 0.06;
+  pointer-events: none;
+  line-height: 1;
+  transform: rotate(12deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.qualifications .qualification-card:hover .qual-watermark {
+  transform: rotate(0deg) scale(1.08);
+  opacity: 0.12;
+}
+
+.qualifications .qual-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 15px;
+}
+
+.qualifications .qual-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 26px;
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 85%);
+  transition: transform 0.4s ease;
+}
+
+.qualifications .qualification-card:hover .qual-icon-wrap {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.qualifications .qual-logo-wrap {
+  background: #ffffff;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.qualifications .qual-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.qualifications .qual-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.qualifications .qual-level-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+}
+
+.qualifications .qual-status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+  text-transform: uppercase;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.qualifications .qual-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.qualifications .qual-institution {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.qualifications .qual-branch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 12px;
+}
+
+.qualifications .qual-branch i {
+  color: var(--accent-color);
+}
+
+.qualifications .qual-degree {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.qualifications .qual-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.qualifications .qual-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.qualifications .qual-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--default-color), transparent 96%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--heading-color);
+  transition: all 0.3s ease;
+}
+
+.qualifications .qual-tag i {
+  color: var(--accent-color);
+  font-size: 13px;
+}
+
+.qualifications .qualification-card:hover .qual-tag {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 75%);
+  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+}
+
+.qualifications .qual-card-glow {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  bottom: -70px;
+  right: -70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 80%) 0%, transparent 70%);
+  filter: blur(24px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.qualifications .qualification-card:hover .qual-card-glow {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .qualifications .qualification-card {
+    padding: 30px 22px;
+  }
+  .qualifications .qual-institution {
+    font-size: 19px;
+  }
+  .qualifications .qual-degree {
+    font-size: 16px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
 .stats .stats-item {
