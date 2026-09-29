@@ -573,15 +573,14 @@ section,
 }
 
 .hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  display: none;
 }
 
 .hero .container {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
   z-index: 3;
   text-align: center;
 }
@@ -599,6 +598,18 @@ section,
   font-size: 0.95rem;
   font-weight: 600;
   transition: 0.3s;
+  animation: hero-scroll-up-bounce 2s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-up-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .hero-scroll-up-btn:hover {
