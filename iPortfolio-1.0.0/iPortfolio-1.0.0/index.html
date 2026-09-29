@@ -115,6 +115,11 @@
             >
           </li>
           <li>
+            <a href="#projects"
+              ><i class="bi bi-images navicon"></i><span>Projects</span></a
+            >
+          </li>
+          <li>
             <a href="#contact"
               ><i class="bi bi-envelope navicon"></i><span>Contact</span></a
             >
@@ -397,6 +402,116 @@
         </div>
       </section>
       <!-- /Services Section -->
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span class="section-kicker">PORTFOLIO WORK</span>
+          <h2>Projects</h2>
+          <p>Explore selected technical drawings, drafting layouts, and 3D modeling works.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper projects-slider">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".projects-swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "navigation": {
+                  "nextEl": ".projects-swiper-next",
+                  "prevEl": ".projects-swiper-prev"
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 20
+                  },
+                  "768": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 24
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 28
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-stretch">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="card-accent-bar"></div>
+                  <div class="project-img-box teaser-img-box">
+                    <div class="teaser-icon-glow">
+                      <i class="bi bi-compass"></i>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <span class="project-tag">UPCOMING RELEASES</span>
+                    <h4>More Projects Coming Soon</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End Slide 1 -->
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="card-accent-bar"></div>
+                  <div class="project-img-box teaser-img-box">
+                    <div class="teaser-icon-glow">
+                      <i class="bi bi-compass"></i>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <span class="project-tag">UPCOMING RELEASES</span>
+                    <h4>More Projects Coming Soon</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End Slide 2 -->
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="card-accent-bar"></div>
+                  <div class="project-img-box teaser-img-box">
+                    <div class="teaser-icon-glow">
+                      <i class="bi bi-compass"></i>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <span class="project-tag">UPCOMING RELEASES</span>
+                    <h4>More Projects Coming Soon</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- End Slide 3 -->
+            </div>
+
+            <!-- Swiper Controls / Scroll Arrows -->
+            <div class="projects-controls d-flex align-items-center justify-content-center gap-3 mt-4">
+              <button type="button" class="projects-nav-btn projects-swiper-prev" aria-label="Previous Slide">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <div class="projects-swiper-pagination d-inline-flex justify-content-center"></div>
+              <button type="button" class="projects-nav-btn projects-swiper-next" aria-label="Next Slide">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Projects Section -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
